@@ -1,0 +1,16 @@
+ion-col {
+    text-align: center;
+}
+
+ion-button {
+    width: 100px;
+    height: 150px;
+    --border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+ion-content {
+    --background: url('/assets/backgrounds/unicornios.jpg');
+    background-size: 100%;
+    background-repeat: repeat-y;
+}

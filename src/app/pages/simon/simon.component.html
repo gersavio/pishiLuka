@@ -1,0 +1,19 @@
+<ion-content>
+  <app-menu></app-menu>
+
+
+  <div class="container">
+    <div class="board">
+      <div id="1" [class.yellow]="!colors[0].active" [class.active-yellow]="colors[0].active" class="triangle" (click)="pushButton(1)">
+      </div>
+
+      <div id="2" [class.red]="!colors[1].active" [class.active-red]="colors[1].active" class="triangle" (click)="pushButton(2)"></div>
+
+      <div id="3" [class.blue]="!colors[2].active" [class.active-blue]="colors[2].active" class="triangle" (click)="pushButton(3)"></div>
+
+      <div id="4" [class.green]="!colors[3].active" [class.active-green]="colors[3].active" class="triangle" (click)="pushButton(4)"></div>
+
+      <div class="s_circle"></div>
+    </div>
+  </div>
+</ion-content>

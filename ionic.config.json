@@ -1,0 +1,7 @@
+{
+  "name": "PishiLukaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

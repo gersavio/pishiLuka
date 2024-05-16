@@ -1,0 +1,100 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 5px;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color:white;
+}
+
+
+
+.board{
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.s_circle{
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background-color: grey;
+  border-radius: 50%;
+  margin-top: 38%;
+  margin-left: 38%;
+  border: 2px solid black;
+
+}
+
+.triangle {
+  box-sizing: content-box;
+  overflow:hidden;
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+
+
+
+}
+
+.triangle.blue {
+  background: rgb(3, 88, 173, 0.52);
+  width: 100%;
+  height: auto;
+}
+
+
+.triangle.yellow {
+  background: rgba(255, 255, 0, 0.52);
+  width: 100%;
+  height: auto;
+
+
+}
+
+.triangle.red {
+  background: rgb(171, 2, 2, 0.52);
+  width: 100%;
+  height: auto;
+}
+
+.triangle.green {
+  background: rgb(1, 83, 1, 0.52);
+  width: 100%;
+  height: auto;
+}
+
+
+.active-yellow{
+  background: yellow;
+  width: 100%;
+  height: auto;
+}
+.active-blue{
+  background: blue;
+  width: 100%;
+  height: auto;
+
+}
+.active-red{
+  background: red;
+  width: 100%;
+  height: auto;
+
+}
+.active-green{
+  background: green;
+  width: 100%;
+  height: auto;
+
+}
+

@@ -1,0 +1,33 @@
+ion-col {
+    text-align: center;
+
+}
+
+ion-button {
+    width: 100px;
+    height: 100px;
+    --border-radius: 20px;
+    --border: 2px gray solid;
+     margin-bottom: 20px;
+}
+.btn-white {
+  --border-color: grey;
+  --border-style: solid;
+  --border-width: 1px;
+ }
+
+
+
+#rojo { --background:red; }
+#verde{ --background:green; }
+#amarillo { --background:yellow; }
+#azul { --background:blue; }
+#blanco { --background:white; }
+#marron{ --background:brown; }
+#naranja{ --background:orange; }
+#negro{ --background:black; }
+#rosa{ --background:palevioletred; }
+#turquesa{ --background:rgb(8, 247, 203); }
+#gris{ --background:grey; }
+#morado{ --background:purple; }
+

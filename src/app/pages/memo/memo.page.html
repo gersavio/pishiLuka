@@ -1,0 +1,35 @@
+<ion-content>
+  <app-menu></app-menu>
+
+  <div class="btn-container">
+    <button class="btn-change"  (click)="cambioNumeros()">Números</button>
+    <button class="btn-change"  (click)="cambioFotos()">Fotos</button>
+    <button class="btn-reset animate__animated animate__rotateIn"  (click)="reset()" >
+      <img src="assets/icons/recargar.png" alt="reset_image" class="reset_img">
+    </button>
+
+  </div>
+
+  <div class="container">
+    <div *ngFor="let card of cards" (click)="flipCard(card)"  [ngClass]="{'animate__animated animate__bounce animate__pulse': card.selected}">
+      <div class="card image ">
+        <div class="card-inner " [class.flipped]="card.flipped" >
+          <div class="card-front"></div>
+          <div class="card-back card-img " *ngIf="card.flipped">
+            <img
+            *ngIf="!numbers"
+            [src]="card.img" alt="Card Image"  />
+            <img
+            *ngIf="numbers"
+            [src]="card.num_img" alt="Card Image"  />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+
+
+

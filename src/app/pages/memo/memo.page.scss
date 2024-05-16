@@ -1,0 +1,92 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  gap: 5px;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(159, 159, 238, 0.5914740896358543) 5%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 102px;
+  height: 145px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.card-img {
+  box-sizing: border-box;
+  width: 100px;
+  height: 143px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+
+.btn-change {
+  width: 80px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: rgb(214, 151, 206);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.btn-change:hover {
+  background-color: rgb(99, 194, 241);
+}
+.btn-reset {
+  width: 80px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(238, 119, 208, 1) 100%
+  );
+}
+
+.reset_img {
+  margin: 0 auto;
+  width: 45%;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 50vb;
+    height: auto;
+  }
+  .card {
+    width: 80px;
+    height: 95px;
+  }
+  .card-img {
+    width: 80px;
+    height: 95px;
+  }
+}

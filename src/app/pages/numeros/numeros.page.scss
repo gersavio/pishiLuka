@@ -1,0 +1,49 @@
+ion-col {
+    text-align: center;
+}
+
+ion-button {
+    width: 100px;
+    height: 150px;
+    --border-radius: 20px;
+    margin-bottom: 20px;
+}
+.btn-flat {
+  width: 80px;
+  height: 50px;
+  margin-top: 20px;
+
+}
+
+.btn-flat:hover {
+  width: 90px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  margin-bottom: 15px;
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+
+#uno { --background: url('/assets/backgrounds/numeros/uno.png') no-repeat center center / cover;}
+#dos { --background: url('/assets/backgrounds/numeros/dos.png') no-repeat center center / cover;}
+#tres { --background: url('/assets/backgrounds/numeros/tres.png') no-repeat center center / cover;}
+#cuatro { --background: url('/assets/backgrounds/numeros/cuatro.png') no-repeat center center / cover;}
+#cinco { --background: url('/assets/backgrounds/numeros/cinco.png') no-repeat center center / cover;}
+#seis { --background: url('/assets/backgrounds/numeros/seis.png') no-repeat center center / cover;}
+#siete { --background: url('/assets/backgrounds/numeros/siete.png') no-repeat center center / cover;}
+#ocho { --background: url('/assets/backgrounds/numeros/ocho.png') no-repeat center center / cover;}
+#nueve { --background: url('/assets/backgrounds/numeros/nueve.png') no-repeat center center / cover;}
+#cero { --background: url('/assets/backgrounds/numeros/cero.png') no-repeat center center / cover;}

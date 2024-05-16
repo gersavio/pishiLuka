@@ -1,0 +1,39 @@
+<ion-content>
+  <app-menu></app-menu>
+  <div class="container">
+    <button class="btn-flat" >
+
+      <img src="assets/backgrounds/banderas/spain.png" alt="flat_image" class="card-img"
+      (click)="cambioIdomaspanish()">
+    </button>
+
+    <button class="btn-flat">
+
+      <img src="assets/backgrounds/banderas/england.png" alt="flat_image" class="card-img"
+      (click)="cambiodIdomaIngles()">
+    </button>
+
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-button id="uno" (click)="playSelectedLenguage('uno')"></ion-button></ion-col>
+      <ion-col><ion-button id="dos" (click)="playSelectedLenguage('dos')"></ion-button></ion-col>
+      <ion-col><ion-button id="tres" (click)="playSelectedLenguage('tres')"></ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button id="cuatro" (click)="playSelectedLenguage('cuatro')"></ion-button></ion-col>
+      <ion-col><ion-button id="cinco" (click)="playSelectedLenguage('cinco')"></ion-button></ion-col>
+      <ion-col><ion-button id="seis" (click)="playSelectedLenguage('seis')"></ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button id="siete" (click)="playSelectedLenguage('siete')"></ion-button></ion-col>
+      <ion-col><ion-button id="ocho" (click)="playSelectedLenguage('ocho')"></ion-button></ion-col>
+      <ion-col><ion-button id="nueve" (click)="playSelectedLenguage('nueve')"></ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button id="cero" (click)="playSelectedLenguage('cero')"></ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
