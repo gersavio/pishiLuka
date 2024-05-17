@@ -1,19 +1,21 @@
 import { Color } from './../../interfaces/simon.interface';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-simon',
   templateUrl: './simon.component.html',
   styleUrls: ['./simon.component.scss'],
 })
-export class SimonPage implements OnInit {
+export class SimonPage {
 
- public round:number = 0;
+  private round:number = 0;
   private sounds: { [key: string]: HTMLAudioElement } = {};
   private gameColours:string[] = [];
+  private pushedColors:string[]= [];
 
   constructor() {
     this.preloadSounds();
+
 
   }
 
@@ -28,121 +30,142 @@ export class SimonPage implements OnInit {
     });
   }
 
+   yellow = false;
+   red = false;
+   blue = false;
+   green = false;
+
   colors: Color[] = [
     {
       id: 1,
       name: 'yellow',
       active: false,
-      sound: '/assets/sounds/Amarillo.mp3',
+      sound: '/assets/sounds/yellow.mp3',
     },
     {
       id: 2,
       name: 'red',
       active: false,
-      sound: '/assets/sounds/Rojo.mp3',
+      sound: '/assets/sounds/red.mp3',
     },
     {
       id: 3,
       name: 'blue',
       active: false,
-      sound: '/assets/sounds/Azul.mp3',
+      sound: '/assets/sounds/blue.mp3',
     },
     {
       id: 4,
       name: 'green',
       active: false,
-      sound: '/assets/sounds/Verde.mp3',
+      sound: '/assets/sounds/green.mp3',
     },
   ];
 
-  ngOnInit(){
-    this.gameStart();
-  }
+
+
+start(){
+
+}
 
 
   //Crear array con el orden de colores de la partida
-  suflleColors(colors: Color[]){
-   let nuevaLIsta = this.colors.sort(() => Math.random() -0.5)
-
-   console.log('orden colores barajados',nuevaLIsta)
-   return nuevaLIsta
-     }
-
-
-
 
 
   gameStart(){
-    this.suflleColors([]);
+    let nuevaLIsta = this.colors.sort(() => Math.random() -0.5)
+    let firstColor = nuevaLIsta[0];
 
 
 
-    console.log('EL juego comienza')
+        console.log('COLOR START:::' , this.colors[0].name)
 
-    let firstColor = this.colors[0];
-    console.log('COLOR START:::' , this.colors[0].name)
 
+
+    if(firstColor.name === 'yellow'){
+    this.yellow = true
     firstColor.active = true;
 
+    setTimeout(() => {
+      this.yellow = false;
+    }, 2000);
+  }
+
+    if(firstColor.name === 'red'){
+      this.red = true
+      firstColor.active = true;
+
+      setTimeout(() => {
+        this.red = false;
+      }, 2000);
+    }
+
+      if(firstColor.name === 'blue'){
+        this.blue = true
+        firstColor.active = true;
+
+        setTimeout(() => {
+          this.blue = false;
+        }, 2000);
+      }
+
+        if(firstColor.name === 'green'){
+          this.green = true
+          firstColor.active = true;
+
+          setTimeout(() => {
+            this.green = false;
+          }, 2000)
+        }
+
+     //Sonidos
     const gameSound = this.sounds[firstColor?.name];
     console.log(gameSound)
-    if (firstColor.active = true) {
-
-      gameSound.play();}
-
+    if (firstColor.active === true) {
+    gameSound.play();}
 
 
-    setTimeout(() => {
-      firstColor.active = false;
-      console.log('apago el color' , firstColor.name)
+      this.gameColours.push(firstColor.name);
+        if(this.gameColours.length === 5){
+          this.gameColours = [];
 
-    }, 2000);
+          console.log('Juego Terminado')
+        }
+      console.log('NUEVO ARRAY', this.gameColours)
 
 
-    console.log('color random', firstColor)
+    }
 
+
+
+
+ pushButton(id: string) {
+
+  this.colors.find(c => c.name === id);
+  this.pushedColors.push(id);
+  this.round ++;
+
+  if(this.round === 5){
+    this.round = 0;
   }
 
 
 
 
- pushButton(id: number) {
-   //Cambiar a true active
-
-   //this.suflleColors();
-   this.round ++;
+  console.log(this.round)
+  console.log('PushedColors:', this.pushedColors)
 
 
-  //  const selectedColor = this.colors.find(
-  //     (selectedColor) => selectedColor.id === id
-  //     );
-
-  //     if (selectedColor) {
-  //       selectedColor.active = true;
-  //       setTimeout(() => {
-  //       selectedColor.active = false;
-  //     }, 1000);
-
-  //     //Completar ronda
-  //     if(this.round >= this.colors.length){
-  //       console.log('game Over')
-
-  //     };
-
-  //     //Reproducir sonido
-  //     console.log('Sonido Reproduciendose')
-  //     const sound = this.sounds[selectedColor?.name];
-  //     if (sound) {
-    //       sound.play();
 
 
-   // console.log('Ronda :' ,this.round)
-    //console.log('Color :' ,selectedColor?.name)
 
 
-  //        }
-  //     }
+
+
    }
+
+
+
 
  }
 
