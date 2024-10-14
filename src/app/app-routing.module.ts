@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'numeros', loadChildren: () => import('./pages/numeros/numeros.module').then(m => m.NumerosPageModule) },
   { path: 'primos', loadChildren: () => import('./pages/primos/primos.module').then(m => m.PrimosPageModule) },
   { path: 'memo', loadChildren: () => import('./pages/memo/memo.module').then(m => m.MemoPageModule) },
-  { path: 'simon', loadChildren: () => import('./pages/simon/simon.module').then(m => m.SimonPageModule) },
+  // { path: 'simon', loadChildren: () => import('./pages/simon/simon.module').then(m => m.SimonPageModule) },
   { path: '', redirectTo: 'colores', pathMatch: 'full' },
   {path: '**', redirectTo: 'colores'}
 ];

@@ -12,13 +12,13 @@ ion-button {
   width: 80px;
   height: 50px;
   margin-top: 20px;
-
 }
 
 .btn-flat:hover {
   width: 90px;
   height: 60px;
   margin-top: 20px;
+  margin-bottom: -20px;
 }
 
 .container{
@@ -27,6 +27,8 @@ ion-button {
   align-items: center;
   gap:20px;
   margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .card-img {
   width: 100%;

@@ -159,8 +159,6 @@ export class MemoPage {
     if (!card.flipped && this.selectedCard.length < 2) {
       card.flipped = true;
       this.selectedCard.push(card);
-
-
     }
 
     if (this.selectedCard.length === 2) {

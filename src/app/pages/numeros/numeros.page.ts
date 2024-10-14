@@ -1,66 +1,62 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-numeros',
   templateUrl: './numeros.page.html',
   styleUrls: ['./numeros.page.scss'],
 })
-export class NumerosPage implements OnInit {
-  public spanish:boolean = true;
+export class NumerosPage{
+  public lenguage: string = 'spanish';
+  selectlenguage: HTMLAudioElement;
 
-
-  constructor() { }
-
-  ngOnInit() {
-
+  constructor() {
+    this.selectlenguage = new Audio();
+    this.selectlenguage.src = 'assets/sounds/memo/first.mp3';
   }
 
+  cambiodIdomaIngles() {
+    this.lenguage = 'english';
+    this.selectlenguage.play();
 
-  playSpanishSound(numeros: string): void {
-
-        const sound = new Audio();
-        sound.src = "assets/sounds/numeros/" + numeros + ".mp3";
-        sound.play();
-
-      }
-
-
-  playEnglishSound(numeros: string): void {
-
-    const sound = new Audio();
-    sound.src = "assets/sounds/ingles_numeros/" + numeros + ".mp3";
-    sound.play();
-
-
-
+  }
+  cambioIdomaspanish() {
+    this.lenguage = 'spanish';
+    this.selectlenguage.play();
+  }
+  cambioIdomachino() {
+    this.lenguage = 'chinese';
+    this.selectlenguage.play();
   }
 
   playSelectedLenguage(numeros: string): void {
-    if (this.spanish) {
+    switch (this.lenguage) {
+      case 'spanish':
         this.playSpanishSound(numeros);
-    } else {
+        break;
+      case 'english':
         this.playEnglishSound(numeros);
+        break;
+      case 'chinese':
+        this.playChineseSound(numeros);
+        break;
     }
-}
+  }
 
+  playSpanishSound(numeros: string): void {
+    const sound = new Audio();
+    sound.src = 'assets/sounds/numeros/' + numeros + '.mp3';
+    sound.play();
+  }
 
+  playEnglishSound(numeros: string): void {
+    const sound = new Audio();
+    sound.src = 'assets/sounds/ingles_numeros/' + numeros + '.mp3';
+    sound.play();
+  }
 
-
-
-
-
-    cambiodIdomaIngles(){
-     this.spanish = false;
-     console.log('INGLES')
-      }
-
-
-    cambioIdomaspanish(){
-     this.spanish = true;
-     console.log('ESPAÑOLLLLL')
-    }
-
-
-
+  playChineseSound(numeros: string): void {
+    const sound = new Audio();
+    sound.src = 'assets/sounds/numeroschinos/' + numeros + '.mp3';
+    sound.play();
+  }
 }

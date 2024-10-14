@@ -1,18 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-colores',
   templateUrl: './colores.page.html',
   styleUrls: ['./colores.page.scss'],
 })
-export class ColoresPage implements OnInit {
+export class ColoresPage{
   timeout: any;
   double: boolean = false;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   playSound(color: string) {
     if(this.double === true) {
